@@ -16,6 +16,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
     private int delay = 1;
 
     private int playerX = 310;
+    private int playerXDir = 20;
 
     private int ballposX = 120;
     private int ballposY = 350;
@@ -110,7 +111,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
                             map.setBrickValue(0, i, j);
                             totalBricks--;
                             score += 5;
-                            
+                            playerXDir++;
+
                             if(ballXdir < 0){
                                 ballXdir--;
                             }
@@ -175,6 +177,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
                 playerX = 310;
                 score = 0;
                 totalBricks = 21;
+                playerXDir = 20;
                 map = new MapGenerator(3, 7);
 
                 repaint();
@@ -184,11 +187,11 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
 
     public void moveRight(){
         play = true;
-        playerX += 20;
+        playerX += playerXDir;
     }
 
     public void moveLeft(){
         play = true;
-        playerX -= 20;
+        playerX -= playerXDir;
     }
 }
