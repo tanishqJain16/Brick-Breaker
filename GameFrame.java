@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-
+//main
 public class GameFrame extends JFrame {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
