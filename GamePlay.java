@@ -38,6 +38,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
         g.setColor(Color.black);
         g.fillRect(1, 1, 692, 592);
 
+        // map drawn
         map.draw((Graphics2D)g);
 
         // borders
